@@ -7,8 +7,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             //calculator();
-            find_range();
-            // Test3();
+            //find_range();
+            translate();
             // Test4();
         }
 
@@ -48,7 +48,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
         public static void find_range()
         {
-            
+
             Console.Write("Please, enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
 
@@ -71,7 +71,36 @@ namespace MyApp // Note: actual namespace depends on the project name.
             else //Сообщение что число не попадает ни под один диапазон
             {
                 Console.WriteLine("The number does not fall within any range");
-            }    
+            }
+        }
+
+
+        public static void translate()
+        {
+
+            var words = new Dictionary<string, string>() //создаем словарь на 10 слов о погоде
+             {
+                 {"солнце", "sun"},
+                 {"небо", "sky"},
+                 {"дождь", "rain"},
+                 {"гроза", "storm"},
+                 {"снег", "snow"},
+                 {"холод", "cold"},
+                 {"жара", "hot"},
+                 {"град", "hail"},
+                 {"ветер", "wind"},
+                 {"туман", "fog"}
+             };
+            Console.WriteLine("Please, write a word about the weather in Russian");
+            string word_search = Console.ReadLine().ToLower();
+            if (words.ContainsKey(word_search)) //проверяем наличие введенного слова в словаре
+            {
+                Console.WriteLine("Word {0} is meaning {1}", word_search, words[word_search]);
+            }
+            else
+            {
+                Console.WriteLine("The dictionary doesn't exist word is {0}", word_search); 
+            }
         }
     }
 }
