@@ -9,7 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //calculator();
             //find_range();
             translate();
-            // Test4();
+            //parity_check();
         }
 
         public static void calculator()
@@ -100,6 +100,21 @@ namespace MyApp // Note: actual namespace depends on the project name.
             else
             {
                 Console.WriteLine("The dictionary doesn't exist word is {0}", word_search); 
+            }
+        }
+
+        public static void parity_check()
+        {
+            Console.Write("Please, enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if (number % 2 == 0)
+            {
+                Console.WriteLine("Even number"); //число четное
+            }
+            else
+            {
+                Console.WriteLine("Odd number"); //число нечетное
             }
         }
     }
