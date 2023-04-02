@@ -6,9 +6,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            //calculator();
+            calculator();
             //find_range();
-            translate();
+            //translate();
             //parity_check();
         }
 
@@ -42,7 +42,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     Console.WriteLine("Result = " + result);
                     break;
                 default:
-                    Console.WriteLine("Invalid operation");
+                    Console.WriteLine("Invalid operation or division by zero");
                     break;
             }
         }
