@@ -6,8 +6,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            calculator();
-            // Test2();
+            //calculator();
+            find_range();
             // Test3();
             // Test4();
         }
@@ -45,6 +45,33 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     Console.WriteLine("Invalid operation");
                     break;
             }
+        }
+        public static void find_range()
+        {
+            
+            Console.Write("Please, enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if (number >= 0 && number <= 14) //проверка числа на принадлежность к первому диапазону
+            {
+                Console.WriteLine("The number is in the range from 0 to 14");
+            }
+            else if (number >= 15 && number <= 35) //проверка числа на принадлежность ко второму диапазону
+            {
+                Console.WriteLine("The number is in the range from 15 to 35");
+            }
+            else if (number >= 36 && number <= 50)  //проверка числа на принадлежность к третьему диапазону
+            {
+                Console.WriteLine("The number is in the range from 36 to 50");
+            }
+            else if (number >= 51 && number <= 100) //проверка числа на принадлежность к четвертому диапазону
+            {
+                Console.WriteLine("The number is in the range from 51 to 100");
+            }
+            else //Сообщение что число не попадает ни под один диапазон
+            {
+                Console.WriteLine("The number does not fall within any range");
+            }    
         }
     }
 }
