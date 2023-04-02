@@ -6,13 +6,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Test1();
+            calculator();
             // Test2();
             // Test3();
             // Test4();
         }
 
-        public static void Test1()
+        public static void calculator()
         {
             char operation;
             double result;
@@ -25,24 +25,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             switch (operation)
             {
-                case '+':
+                case '+':                         //Операция сложения
                     result = operand1 + operand2;
                     Console.WriteLine("Result = " + result);
                     break;
-                case '-':
+                case '-':                        //Операция вычитание
                     result = operand1 - operand2;
                     Console.WriteLine("Result = " + result);
                     break;
-                case '*':
+                case '*':                       //Операция умножение
                     result = operand1 * operand2;
                     Console.WriteLine("Result = " + result);
                     break;
-                case '/':
+                case '/' when operand2 > 0:     //Операция деления с доп.проверкой на ноль
                     result = operand1 / operand2;
                     Console.WriteLine("Result = " + result);
                     break;
                 default:
-                    Console.WriteLine("hh");
+                    Console.WriteLine("Invalid operation");
                     break;
             }
         }
