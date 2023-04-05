@@ -6,10 +6,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            calculator();
-            //find_range();
-            //translate();
-            //parity_check();
+            Calculator();
+            //Find_range();
+            //Translate();
+            //Parity_check();
         }
 
         public static void calculator()
@@ -18,8 +18,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             double result;
             Console.Write("Enter the first number: ");
             double operand1 = Convert.ToDouble(Console.ReadLine());
+
             Console.Write("Enter the second number: ");
             double operand2 = Convert.ToDouble(Console.ReadLine());
+
             Console.Write("Enter the arithmetic operation (+,-,*,/): ");
             operation = (char)Console.Read();
 
@@ -46,6 +48,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     break;
             }
         }
+
         public static void find_range()
         {
 
@@ -77,7 +80,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         public static void translate()
         {
-
             var words = new Dictionary<string, string>() //создаем словарь на 10 слов о погоде
              {
                  {"солнце", "sun"},
