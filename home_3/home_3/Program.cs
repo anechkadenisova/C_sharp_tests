@@ -19,10 +19,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //BubbleSort();
         }
 
-        private static void NameArray()
-        {
-            throw new NotImplementedException();
-        }
 
         public static void SearchNumber()
         {
