@@ -7,12 +7,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Calculator();
-            //FindRange();
+            //Find_range();
             //Translate();
-            //ParityCheck();
+            //Parity_check();
         }
 
-        public static void Calculator()
+        public static void calculator()
         {
             char operation;
             double result;
@@ -49,7 +49,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
 
-        public static void FindRange()
+        public static void find_range()
         {
 
             Console.Write("Please, enter a number: ");
@@ -78,7 +78,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
 
 
-        public static void Translate()
+        public static void translate()
         {
             var words = new Dictionary<string, string>() //создаем словарь на 10 слов о погоде
              {
@@ -105,7 +105,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
 
-        public static void ParityCheck()
+        public static void parity_check()
         {
             Console.Write("Please, enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
