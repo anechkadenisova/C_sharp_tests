@@ -15,6 +15,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //MaxMinAvr();
             //AvrArray();
             OddRemove();
+            //SortNameArray();
+            //BubbleSort();
+        }
+
+        private static void NameArray()
+        {
+            throw new NotImplementedException();
         }
 
         public static void SearchNumber()
@@ -39,10 +46,18 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         public static void RemoveElement()
         {
-            int[] numbers = { 0, 2, 4, 2, 8, 10, 3, 4, 5 };
+            Random random = new Random();
+            int[] numbers = new int[6];
+
+            Console.WriteLine("Initialaize Array");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = random.Next(1, 10);
+                Console.Write(numbers[i] + " ");
+            }
             List<int> result = new List<int>(); //Создаем лист, в который будет записываться значения после проверки элемента
 
-            Console.Write("Введите число: ");
+            Console.Write("\nВведите число: ");
             int target = int.Parse(Console.ReadLine());
             bool isExist = numbers.Contains(target);
 
@@ -71,7 +86,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Random random = new Random();
             int[] numbers = new int[6];
 
-            Console.WriteLine("Intialaize Array");
+            Console.WriteLine("Initialaize Array");
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = random.Next(1, 10);
@@ -160,7 +175,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Random random = new Random();
             int[] numbers = new int[6];
 
-            Console.WriteLine("Intialaize array");
+            Console.WriteLine("Initialaize array");
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = random.Next(1, 15);
@@ -171,6 +186,53 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
             Console.Write("\nResult: ");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write(numbers[i] + " ");
+            }
+        }
+
+        public static void SortNameArray()
+        {
+            string[] names = new string[] { "Kolya", "Anna", "Kostya", "Andrey", "Vasya", "Petya" };
+
+            Console.WriteLine("Initialaize Array");
+            for (int i = 0; i < names.Length; i++)
+            {
+                Console.Write(names[i] + " ");
+            }
+            Console.WriteLine("\nSorted names: ");
+            Array.Sort(names);
+            for (int i = 0; i < names.Length; i++)
+            {
+                Console.Write(names[i] + " ");
+            }
+        }
+
+        public static void BubbleSort()
+        {
+            Random random = new Random();
+            int[] numbers = new int[6];
+            Console.WriteLine("Initialaize Array");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = random.Next(1, 30);
+                Console.Write(numbers[i] + " ");
+            }
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers.Length - 1; j++)
+                {
+                    if (numbers[j] > numbers[j + 1])
+                    {
+                        int tmp = numbers[j];
+                        numbers[j] = numbers[j + 1];
+                        numbers[j + 1] = tmp;
+                    }
+                }
+            }
+            Console.WriteLine("\nBubbleSort: ");
             for (int i = 0; i < numbers.Length; i++)
             {
                 Console.Write(numbers[i] + " ");
