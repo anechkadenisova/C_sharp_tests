@@ -14,21 +14,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //RemoveElement();
             //MaxMinAvr();
             //AvrArray();
-            OddRemove();
+            //OddRemove();
             //SortNameArray();
             //BubbleSort();
         }
 
-        private static void NameArray()
-        {
-            throw new NotImplementedException();
-        }
 
         public static void SearchNumber()
         {
             int[] numbers = { 0, 2, 4, 6, 8, 10 };
 
-            Console.Write("Введите число: ");
+            Console.Write("Enter the number: ");
 
             int target = int.Parse(Console.ReadLine());
 
@@ -57,7 +53,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
             List<int> result = new List<int>(); //Создаем лист, в который будет записываться значения после проверки элемента
 
-            Console.Write("\nВведите число: ");
+            Console.Write("\nEnter the number: ");
             int target = int.Parse(Console.ReadLine());
             bool isExist = numbers.Contains(target);
 
@@ -82,7 +78,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         public static void MaxMinAvr()
         {
-
             Random random = new Random();
             int[] numbers = new int[6];
 
@@ -132,18 +127,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.Write("The first array: ");
             for (int i = 0; i < array1.Length; i++)
                 Console.Write(array1[i] + " ");
+
             Console.Write("\nThe second array: ");
             for (int i = 0; i < array2.Length; i++)
                 Console.Write(array2[i] + " ");
 
             double sum1 = 0; //Вычисление среднего значения чисел первого массива
             double avr1 = 0;
+
             for (int i = 0; i < array1.Length; i++)
             {
                 sum1 += array1[i];
             }
             avr1 = Math.Round((sum1 / array1.Length), 2);
-
             Console.WriteLine("\nAverage first: " + avr1);
 
             double sum2 = 0; //Вычисление среднего значения чисел второго массива
@@ -153,7 +149,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 sum2 += array2[i];
             }
             avr2 = Math.Round((sum2 / array2.Length), 2);
-
             Console.WriteLine("Average second: " + avr2);
 
             if (avr2 > avr1) //Сравниваем средние значения
@@ -176,6 +171,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int[] numbers = new int[6];
 
             Console.WriteLine("Initialaize array");
+
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = random.Next(1, 15);
