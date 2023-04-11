@@ -9,7 +9,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Testing();
             //TMSlesson();
             //ABC();
-            GoodDay();
+            //GoodDay();
+            //RemoveDigits();
+            //CounterWords();
 
         }
 
@@ -17,7 +19,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         /// Задать строку содержащую внутри цифры и несколько повторений слова test,
         /// Заменить в строке все вхождения 'test' на 'testing'.
         /// </summary>
-
+        
         public static void Testing()
         {
             string set = " 1, 5, 6, test, test, 32, 56, test ";
@@ -34,7 +36,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         /// Каждое слово должно быть записано отдельно и взято в кавычки,
         /// например "Welcome". Не забывайте о пробелах после каждого слова
         /// </summary>
-
+        
         public static void TMSlesson()
         {
             string n1 = "Welcome";
@@ -69,14 +71,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine($"Second part: {secondPart}");
         }
 
-
-
         /// <summary>
         ///  Дана строка: Good day 
         /// Необходимо с помощью метода substring удалить слово "Good".
         /// После чего необходимо используя команду insert создать строку со значением: The best day!!!!!!!!!.
         ///Заменить последний "!" на "?" и вывести результат на консоль.
         /// </summary>
+        
         public static void GoodDay()
         {
             string input = "Good day";
@@ -93,8 +94,56 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             input3 = input3.Substring(0, input3.Length - 1) + "?";
             Console.WriteLine(input3);
-
         }
 
+        /// <summary>
+        /// Введите с консоли строку, которая будет содержать буквы и цифры.
+        /// Удалите из исходной строки все цифры и выведите их на экран.
+        /// (Использовать метод Char.IsDigit(), его не разбирали на уроке,
+        /// посмотрите, пожалуйста, документацию этого метода самостоятельно)
+        /// </summary>
+
+        public static void RemoveDigits()
+        {
+            Console.Write("Enter please set of letters and numbers: ");
+            string input = Console.ReadLine();
+
+            for (int i = 0; i < input.Length; i++) {
+                if (char.IsDigit(input[i]))
+                    continue;
+                Console.Write(input[i]);
+            }
+        }
+       
+        /// <summary>
+        /// Задайте 2 предложения из консоли. Для каждого слова первого предложения
+        /// определите количество его вхождений во второе предложение.
+        /// </summary>
+        
+        public static void CounterWords()
+        {
+            Console.WriteLine("Enter two sentences contain the same words");
+            Console.Write("First: ");
+            string first_sentence = Console.ReadLine();
+
+            Console.Write("Second: ");
+            string second_sentence = Console.ReadLine();
+
+            int count;
+            string[] first_split = first_sentence.Split();
+            string[] second_split = second_sentence.Split();
+
+            foreach(string word_s1 in first_split)
+            {
+                count = 0;
+                foreach (string word_s2 in second_split)
+                {
+                    if (!String.Equals(word_s1, word_s2))
+                        continue;
+                    count++;
+                }
+                Console.WriteLine($"{word_s1} {count}");
+            }
+        }
     }
 }
