@@ -10,7 +10,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Therapist therapist = new Therapist("Makarov A.T.", true);
             Ophthalmologist ophthalmologist = new Ophthalmologist("Fedorov B.L.", true);
             Dentist dentist = new Dentist("Volkova A.D.", true);
-            
 
             Patient patient1 = new Patient ("Potapova D. K.", IlnessType.Eyes);
             Patient patient2 = new Patient("Voronin S. M.", IlnessType.Other);
@@ -21,9 +20,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             clinic.SendToDoctor(patient1, therapist, ophthalmologist, dentist);
             clinic.SendToDoctor(patient2, therapist, ophthalmologist, dentist);
             clinic.SendToDoctor(patient3, therapist, ophthalmologist, dentist);
-
-
-
         }
     }
 }
